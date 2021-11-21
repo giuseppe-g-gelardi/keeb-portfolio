@@ -1,6 +1,7 @@
 import React from 'react'
-import Carousel from 'react-bootstrap/Carousel'
-// import { Container } from '@material-ui/core'
+import { Carousel } from 'react-bootstrap/'
+import { Card } from '@material-ui/core'
+import './styles/Karousel.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -54,24 +55,30 @@ export default function Karousel() {
   ]
 
   return (
-
+    <div style={{marginTop: '20px'}}>
+      <Card>
+    
       <Carousel interval={10000} m='5' p='md'>
 
         {carouselItems.map((item) => (
-          <Carousel.Item key={item.id}>
-            <img 
-              // className='d-dblock w-100'
-              src={item.image}
-              alt=''
-            />
-            <Carousel.Caption>
+          <Carousel.Item 
+            // style={{margin: 'auto'}}
+            key={item.id}>
+              <img 
+                className='d-dblock w-100'
+                src={item.image}
+                alt=''
+              />
+            <Card style={{textAlign: 'center', marginTop: '50px', marginBottom: '50px'}}>
               <h3>{item.name}</h3>
               <p>{item.description}</p>
-            </Carousel.Caption>
+            </Card>
           </Carousel.Item>
         ))}
 
       </Carousel>
+      </Card>
+    </div>
 
 
   )
