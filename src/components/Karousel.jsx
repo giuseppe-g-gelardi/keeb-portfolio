@@ -25,7 +25,12 @@ import nathan3 from '../img/nathan3.png'
 import nathan4 from '../img/nathan4.png'
 import nathan5 from '../img/nathan5.png'
 import nathan6 from '../img/nathan6.png'
-
+import pe1 from '../img/pe1.png'
+import pe2 from '../img/pe2.png'
+import pe3 from '../img/pe3.png'
+import pe4 from '../img/pe4.png'
+import persalice1 from '../img/persalice1.png'
+import persalice2 from '../img/persalice2.png'
 
 export default function Karousel() {
 
@@ -156,6 +161,42 @@ export default function Karousel() {
       image: nathan6,
       description: 'describe moondrop 6'
     },
+    {
+      id: 22,
+      name: 'PrimeElise',
+      image: pe1,
+      description: 'describe pe1 1'
+    },
+    {
+      id: 23,
+      name: 'PrimeElise',
+      image: pe2,
+      description: 'describe pe1 2'
+    },
+    {
+      id: 24,
+      name: 'PrimeElise',
+      image: pe3,
+      description: 'describe pe1 3'
+    },
+    {
+      id: 25,
+      name: 'PrimeElise',
+      image: pe4,
+      description: 'describe pe1 4'
+    },
+    {
+      id: 26,
+      name: 'Alice',
+      image: persalice1,
+      description: 'describe persalice1'
+    },
+    {
+      id: 27,
+      name: 'Alice',
+      image: persalice2,
+      description: 'describe persalice2'
+    }
   ]
 
   return (
