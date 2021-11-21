@@ -1,2 +1,0 @@
-(this["webpackJsonpkeeb-portfolio"]=this["webpackJsonpkeeb-portfolio"]||[]).push([[0],{10:function(e,t,n){"use strict";n.r(t);n(1);var o=n(3),c=n.n(o),r=(n(8),n(0));function i(){return Object(r.jsx)("div",{children:Object(r.jsx)("h1",{children:"app"})})}c.a.render(Object(r.jsx)(i,{}),document.getElementById("root"))},8:function(e,t,n){}},[[10,1,2]]]);
-//# sourceMappingURL=main.10ca1dcf.chunk.js.map
