@@ -7,6 +7,7 @@ import { CssBaseline } from '@mui/material'
 import MainAppBar from './components/MainAppbar'
 import { lightTheme, darkTheme } from './components/Theme'
 import Home from './pages/Home'
+import About from './pages/About'
 import Footer from './components/Footer'
 
 export default function App() {
@@ -19,12 +20,13 @@ export default function App() {
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Paper style={{height: '100vh', width: '100%', borderRadius: '0'}}>
+        <Paper style={{height: '100%', width: '100%', borderRadius: '0'}}>
           <MainAppBar check={darkMode} change={() => setDarkMode(!darkMode)} />
             <Routes>
               <Route path='/keeb-portfolio' element={<Home />} />
+              <Route path='/keeb-portfolio/about' element={<About />} />
             </Routes>
-            <Footer />
+            {/* <Footer /> */}
         </Paper>
       </ThemeProvider>
     </StylesProvider>

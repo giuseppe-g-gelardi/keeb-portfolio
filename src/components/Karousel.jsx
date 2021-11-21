@@ -157,19 +157,41 @@ export default function Karousel() {
       id: 7,
       name: 'Damapad',
       image: bmp1,
-      description: (``),
-      angle: ``,
+      description: (`
+      Ah, the Damapad. I was asked by Bolsa Keyboards to design a macro pad. 
+      The only caveat was that it had to stand out from the other ones currently
+      available in the community. Not to bag but, I think I nailed it. 
+      What is so special about it? For one, it has an OLED display. I also wanted it
+      to cover numbers 1-5 and 6-0. But, I didnt stop there. The 15 + 1 key layout
+      is even big enough to play most games as well as being a very capable utility
+      for anything you could think of throwing at it.
+      `),
+      angle: `Angle: 0°`,
       layout: ``,
-      mounting: ``,
-      plate: ``,
+      mounting: `Mounting: Top Mount`,
+      plate: `Plate: Aluminum`,
       weight: ``,
-      colors: ``
+      colors: `Burgundy and E-White`
     },
     {
       id: 8,
       name: 'Damapad',
       image: bmp2,
-      description: ``
+      description: (`
+      Ah, the Damapad. I was asked by Bolsa Keyboards to design a macro pad. 
+      The only caveat was that it had to stand out from the other ones currently
+      available in the community. Not to bag but, I think I nailed it. 
+      What is so special about it? For one, it has an OLED display. I also wanted it
+      to cover numbers 1-5 and 6-0. But, I didnt stop there. The 15 + 1 key layout
+      is even big enough to play most games as well as being a very capable utility
+      for anything you could think of throwing at it.
+      `),
+      angle: `Angle: 0°`,
+      layout: ``,
+      mounting: `Mounting: Top Mount`,
+      plate: `Plate: Aluminum`,
+      weight: ``,
+      colors: `Burgundy and E-White`
     },
     {
       id: 9,
