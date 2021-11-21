@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Carousel } from 'react-bootstrap/'
-import { Card } from '@material-ui/core'
+import { Card, CardMedia } from '@material-ui/core'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { styled } from '@mui/material/styles';
+import IconButton from '@mui/material/IconButton';
+import Collapse from '@mui/material/Collapse';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
 
 import am1 from '../img/am1.PNG'
 import am2 from '../img/am2.png'
@@ -31,8 +35,26 @@ import pe3 from '../img/pe3.png'
 import pe4 from '../img/pe4.png'
 import persalice1 from '../img/persalice1.png'
 import persalice2 from '../img/persalice2.png'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+const ExpandMore = styled((props) => {
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+  marginLeft: 'auto',
+  transition: theme.transitions.create('transform', {
+    duration: theme.transitions.duration.shortest,
+  }),
+}));
 
 export default function Karousel() {
+
+  const [expanded, setExpanded] = useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
 
   const carouselItems = [
     {
@@ -202,25 +224,41 @@ export default function Karousel() {
   return (
     <div style={{marginTop: '20px'}}>
       <Card>
-    
-      <Carousel interval={10000} m='5' p='md'>
+        <CardMedia>
+          <Carousel interval={25000} m='5' p='md'>
 
-        {carouselItems.map((item) => (
-          <Carousel.Item 
-            key={item.id}>
-              <img 
-                className='d-dblock w-100'
-                src={item.image}
-                alt=''
-              />
-            <Card style={{textAlign: 'center', marginTop: '50px', marginBottom: '50px'}}>
-              <h3>{item.name}</h3>
-              <p>{item.description}</p>
-            </Card>
-          </Carousel.Item>
-        ))}
+            {carouselItems.map((item) => (
+              <Carousel.Item 
+                key={item.id}>
+                  <img 
+                    className='d-dblock w-100'
+                    src={item.image}
+                    alt=''
+                  />
+                <Card style={{textAlign: 'center', marginTop: '50px', marginBottom: '50px'}}>
+                  <h3>{item.name}</h3>
+                  Learn More
+                  <ExpandMore
+                    expand={expanded}
+                    onClick={handleExpandClick}
+                    aria-expanded={expanded}
+                    aria-label="show more"
+                  >
+                    <ExpandMoreIcon />
+                  </ExpandMore>
 
-      </Carousel>
+                  <Collapse in={expanded} timeout="auto" unmountOnExit>
+                    <CardContent>
+                      <Typography paragraph>{item.description}</Typography>
+                      </CardContent>
+                    </Collapse>
+
+                </Card>
+              </Carousel.Item>
+            ))}
+
+          </Carousel>
+        </CardMedia>
       </Card>
     </div>
 
