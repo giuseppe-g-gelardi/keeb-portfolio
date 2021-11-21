@@ -7,6 +7,7 @@ import { CssBaseline } from '@mui/material'
 import MainAppBar from './components/MainAppbar'
 import { lightTheme, darkTheme } from './components/Theme'
 import Home from './pages/Home'
+import Footer from './components/Footer'
 
 export default function App() {
 
@@ -23,6 +24,7 @@ export default function App() {
             <Routes>
               <Route path='/keeb-portfolio' element={<Home />} />
             </Routes>
+            <Footer />
         </Paper>
       </ThemeProvider>
     </StylesProvider>
