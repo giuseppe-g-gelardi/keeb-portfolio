@@ -21,7 +21,7 @@ export default function App() {
         <Paper style={{height: '100vh', width: '100%', borderRadius: '0'}}>
           <MainAppBar check={darkMode} change={() => setDarkMode(!darkMode)} />
             <Routes>
-              <Route path='/' element={<Home />} />
+              <Route path='/keeb-portfolio' element={<Home />} />
             </Routes>
         </Paper>
       </ThemeProvider>
