@@ -235,8 +235,11 @@ export default function Karousel() {
                     src={item.image}
                     alt=''
                   />
-                <Card style={{textAlign: 'center', marginTop: '50px', marginBottom: '50px'}}>
-                  <h3>{item.name}</h3>
+                  
+                  <Card style={{textAlign: 'center', marginTop: '50px', marginBottom: '50px'}}>
+                  <Typography>
+                    <h3>{item.name}</h3>
+                  </Typography>
                   Learn More
                   <ExpandMore
                     expand={expanded}
@@ -250,18 +253,15 @@ export default function Karousel() {
                   <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <CardContent>
                       <Typography paragraph>{item.description}</Typography>
-                      </CardContent>
-                    </Collapse>
+                    </CardContent>
+                  </Collapse>
 
                 </Card>
               </Carousel.Item>
             ))}
-
           </Carousel>
         </CardMedia>
       </Card>
     </div>
-
-
   )
 }
