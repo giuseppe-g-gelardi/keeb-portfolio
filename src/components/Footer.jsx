@@ -5,7 +5,7 @@ import './styles/Footer.css'
 export default function Footer() {
   return (
     
-      <AppBar className='footer' position="static" color="transparent">
+      <AppBar className='footer' position="static" color="inherit">
         <Container className='container' maxWidth="md">
           <Toolbar>
             <Typography variant="body1" color="inherit">

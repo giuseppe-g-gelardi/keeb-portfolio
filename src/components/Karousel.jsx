@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Carousel } from 'react-bootstrap/'
 import { Card, Container } from '@material-ui/core'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { styled } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
-import Collapse from '@mui/material/Collapse';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { styled } from '@mui/material/styles'
+import IconButton from '@mui/material/IconButton'
+import Collapse from '@mui/material/Collapse'
+import CardContent from '@mui/material/CardContent'
+import Typography from '@mui/material/Typography'
 
 import am1 from '../img/am1.PNG'
 import am2 from '../img/am2.png'
@@ -35,37 +35,36 @@ import pe3 from '../img/pe3.png'
 import pe4 from '../img/pe4.png'
 import persalice1 from '../img/persalice1.png'
 import persalice2 from '../img/persalice2.png'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
-const ExpandMore = styled((props) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
+const ExpandMore = styled(props => {
+  const { expand, ...other } = props
+  return <IconButton {...other} />
 })(({ theme, expand }) => ({
   transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
   marginLeft: 'auto',
   transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
+    duration: theme.transitions.duration.shortest
+  })
+}))
 
-export default function Karousel() {
-
-  const [expanded, setExpanded] = useState(false);
+export default function Karousel () {
+  const [expanded, setExpanded] = useState(false)
 
   const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+    setExpanded(!expanded)
+  }
 
   const carouselItems = [
     {
       id: 1,
       name: 'Annus Mirabilis',
       image: am1,
-      description: (`
+      description: `
       I designed the this board at the peak of Covid-19.\n 
       It's named Annus Mirabilis (Wonderful Year) in a bit of sarcasm\n 
       but wanted to pay tribute to the good that did come out of it.\n
-      `),
+      `,
       angle: `Angle: 7°`,
       layout: `Layout: F12 or F13 TKL, WK or WKL`,
       mounting: `Mounting: Top or O-Ring Gasket`,
@@ -77,11 +76,11 @@ export default function Karousel() {
       id: 2,
       name: 'Annus Mirabilis',
       image: am2,
-      description: (`
+      description: `
       I designed the this board at the peak of Covid-19.\n 
       It's named Annus Mirabilis (Wonderful Year) in a bit of sarcasm\n 
       but wanted to pay tribute to the good that did come out of it.\n
-      `),
+      `,
       angle: `Angle: 7°`,
       layout: `Layout: F12 or F13 TKL, WK or WKL`,
       mounting: `Mounting: Top or O-Ring Gasket`,
@@ -93,11 +92,11 @@ export default function Karousel() {
       id: 3,
       name: 'Annus Mirabilis',
       image: am3,
-      description: (`
+      description: `
       I designed the this board at the peak of Covid-19.\n 
       It's named Annus Mirabilis (Wonderful Year) in a bit of sarcasm\n 
       but wanted to pay tribute to the good that did come out of it.\n
-      `),
+      `,
       angle: `Angle: 7°`,
       layout: `Layout: F12 or F13 TKL, WK or WKL`,
       mounting: `Mounting: Top or O-Ring Gasket`,
@@ -109,11 +108,11 @@ export default function Karousel() {
       id: 4,
       name: 'Annus Mirabilis',
       image: am4,
-      description: (`
+      description: `
       I designed the this board at the peak of Covid-19.\n 
       It's named Annus Mirabilis (Wonderful Year) in a bit of sarcasm\n 
       but wanted to pay tribute to the good that did come out of it.\n
-      `),
+      `,
       angle: `Angle: 7°`,
       layout: `Layout: F12 or F13 TKL, WK or WKL`,
       mounting: `Mounting: Top or O-Ring Gasket`,
@@ -125,11 +124,11 @@ export default function Karousel() {
       id: 5,
       name: 'Annus Mirabilis',
       image: am5,
-      description: (`
+      description: `
       I designed the this board at the peak of Covid-19.\n 
       It's named Annus Mirabilis (Wonderful Year) in a bit of sarcasm\n 
       but wanted to pay tribute to the good that did come out of it.\n
-      `),
+      `,
       angle: `Angle: 7°`,
       layout: `Layout: F12 or F13 TKL, WK or WKL`,
       mounting: `Mounting: Top or O-Ring Gasket`,
@@ -141,11 +140,11 @@ export default function Karousel() {
       id: 6,
       name: 'Annus Mirabilis',
       image: am6,
-      description: (`
+      description: `
       I designed the this board at the peak of Covid-19.\n 
       It's named Annus Mirabilis (Wonderful Year) in a bit of sarcasm\n 
       but wanted to pay tribute to the good that did come out of it.\n
-      `),
+      `,
       angle: `Angle: 7°`,
       layout: `Layout: F12 or F13 TKL, WK or WKL`,
       mounting: `Mounting: Top or O-Ring Gasket`,
@@ -157,7 +156,7 @@ export default function Karousel() {
       id: 7,
       name: 'Damapad',
       image: bmp1,
-      description: (`
+      description: `
       Ah, the Damapad. I was asked by Bolsa Keyboards to design a macro pad. 
       The only caveat was that it had to stand out from the other ones currently
       available in the community. Not to bag but, I think I nailed it. 
@@ -165,7 +164,7 @@ export default function Karousel() {
       to cover numbers 1-5 and 6-0. But, I didnt stop there. The 15 + 1 key layout
       is even big enough to play most games as well as being a very capable utility
       for anything you could think of throwing at it.
-      `),
+      `,
       angle: `Angle: 0°`,
       layout: ``,
       mounting: `Mounting: Top Mount`,
@@ -177,7 +176,7 @@ export default function Karousel() {
       id: 8,
       name: 'Damapad',
       image: bmp2,
-      description: (`
+      description: `
       Ah, the Damapad. I was asked by Bolsa Keyboards to design a macro pad. 
       The only caveat was that it had to stand out from the other ones currently
       available in the community. Not to bag but, I think I nailed it. 
@@ -185,7 +184,7 @@ export default function Karousel() {
       to cover numbers 1-5 and 6-0. But, I didnt stop there. The 15 + 1 key layout
       is even big enough to play most games as well as being a very capable utility
       for anything you could think of throwing at it.
-      `),
+      `,
       angle: `Angle: 0°`,
       layout: ``,
       mounting: `Mounting: Top Mount`,
@@ -310,22 +309,23 @@ export default function Karousel() {
   ]
 
   return (
-    <Container style={{marginTop: '20px'}} elevation={20} >
-    {/* <div style={{marginTop: '20px'}}> */}
+    <Container style={{ marginTop: '20px' }} elevation={20}>
+      {/* <div style={{marginTop: '20px'}}> */}
       <Card elevation={20}>
         {/* <CardMedia> */}
-          <Carousel interval={25000} >
-            {carouselItems.map((item) => (
-              <Carousel.Item 
-                key={item.id}>
-                  <img 
-                    className='d-dblock w-100'
-                    src={item.image}
-                    alt=''
-                  />
-<Container maxWidth='xs'>
-                <Card style={{textAlign: 'center', marginTop: '50px', marginBottom: '50px'}}>
-                  <Typography style={{marginTop: '10px'}}>
+        <Carousel interval={25000}>
+          {carouselItems.map(item => (
+            <Carousel.Item key={item.id}>
+              <img className='d-dblock w-100' src={item.image} alt='' />
+              <Container maxWidth='xs'>
+                <Card
+                  style={{
+                    textAlign: 'center',
+                    marginTop: '50px',
+                    marginBottom: '50px'
+                  }}
+                >
+                  <Typography style={{ marginTop: '10px' }}>
                     <h3>{item.name}</h3>
                   </Typography>
                   Learn More
@@ -333,14 +333,13 @@ export default function Karousel() {
                     expand={expanded}
                     onClick={handleExpandClick}
                     aria-expanded={expanded}
-                    aria-label="show more"
+                    aria-label='show more'
                   >
                     <ExpandMoreIcon />
                   </ExpandMore>
-
-                  <Collapse in={expanded} timeout="auto" unmountOnExit>
+                  <Collapse in={expanded} timeout='auto' unmountOnExit>
                     {/* <Card mx='50'> */}
-                    <CardContent >
+                    <CardContent>
                       <Typography paragraph>{item.description}</Typography>
                       <Typography paragraph>{item.angle}</Typography>
                       <Typography paragraph>{item.layout}</Typography>
@@ -351,15 +350,14 @@ export default function Karousel() {
                     </CardContent>
                     {/* </Card> */}
                   </Collapse>
-
                 </Card>
-    </Container>
-              </Carousel.Item>
-            ))}
-          </Carousel>
+              </Container>
+            </Carousel.Item>
+          ))}
+        </Carousel>
         {/* </CardMedia> */}
       </Card>
-    {/* </div> */}
+      {/* </div> */}
     </Container>
   )
 }
